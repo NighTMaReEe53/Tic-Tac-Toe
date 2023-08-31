@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="game.png">
+  <title>X | O</title>
+</head>
+
+<body>
+
+  <div class="over hidden">
+    <lottie-player src="https://lottie.host/0ffba5eb-575d-4b37-a7bf-d737150c2d46/QcVjlGxUq8.json" background="transparent" speed="1"
+      style="width: 100%; height: 300px" loop autoplay></lottie-player>
+  </div>
+
+  <div class="game">
+    <div class="head">
+      <h2>Play Game X | O</h2>
+    </div>
+    <div class="cards">
+      <div class="square" id="item1" onclick="startGame(this.id)"></div>
+      <div class="square" id="item2" onclick="startGame(this.id)"></div>
+      <div class="square" id="item3" onclick="startGame(this.id)"></div>
+      <div class="square" id="item4" onclick="startGame(this.id)"></div>
+      <div class="square" id="item5" onclick="startGame(this.id)"></div>
+      <div class="square" id="item6" onclick="startGame(this.id)"></div>
+      <div class="square" id="item7" onclick="startGame(this.id)"></div>
+      <div class="square" id="item8" onclick="startGame(this.id)"></div>
+      <div class="square" id="item9" onclick="startGame(this.id)"></div>
+    </div>
+    <button class="reset">Reset</button>
+  </div>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1B1B1B;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Shantell Sans', cursive;
+}
+
+.game {
+  width: 50%;
+}
+
+@media(min-width:768px) and (max-width:992px) {
+  .game {
+    width: 70%;
+  }
+}
+
+@media(max-width:767px) {
+  .game {
+    width: 95%;
+  }
+}
+
+.head {
+  background-color: #c6c6c636;
+  color: #FFF;
+  border-radius: 30px;
+  box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.3);
+  background-color: #F0DB4F;
+  border: 6px solid #4d4d4d;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.cards.no-clicked {
+  pointer-events: none;
+}
+
+.cards .square {
+  padding: 10px;
+  border: 2px solid #1B1B1B;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 70px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media(max-width:767px) {
+  .cards .square {
+    font-size: 50px;
+  }
+
+  .head h2 {
+    font-size: 20px;
+  }
+}
+
+.over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.over.show {
+  display: block;
+}
+
+.over.hidden {
+  display: none;
+}
+
+.cards .square:nth-child(1),
+.cards .square:nth-child(4),
+.cards .square:nth-child(7) {
+  border-left: none;
+}
+
+.cards .square:nth-child(3),
+.cards .square:nth-child(6),
+.cards .square:nth-child(9) {
+  border-right: none;
+}
+
+.cards .square:nth-child(1),
+.cards .square:nth-child(2),
+.cards .square:nth-child(3) {
+  border-top: none;
+}
+
+.cards .square:nth-child(7),
+.cards .square:nth-child(8),
+.cards .square:nth-child(9) {
+  border-bottom: none;
+}
+
+.cards .square:hover {
+  background-color: #c6b439;
+}
+
+.reset {
+  background: rgb(84 60 172);
+  color: #FFF;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.3);
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  font-size: 16px;
+  border: none;
+  opacity: 0.7;
+  position: relative;
+  z-index: 555;
+}
+
+.reset:hover {
+  opacity: 1;
+  background-color: rgb(137, 105, 240);
+}
